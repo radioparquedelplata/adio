@@ -195,34 +195,14 @@
 </html
 
 
-
-Bachi Streaming
-OTRO SLAIDER
-Claro, aquí te muestro otro ejemplo de slider con efecto de transición 3D:
-
-HTML:
-
-php
-Copy code
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Slider con efecto de transición 3D</title>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		.slider {
 			width: 100%;
-			position: relative;
-			perspective: 1000px;
-		}
-
-		.slider-container {
-			width: 100%;
 			height: 400px;
 			position: relative;
-			transform-style: preserve-3d;
-			animation: slide 10s infinite;
+			overflow: hidden;
 		}
 
 		.slider-item {
@@ -231,69 +211,63 @@ Copy code
 			left: 0;
 			width: 100%;
 			height: 100%;
-			backface-visibility: hidden;
-			transform-origin: center;
+			background-position: center center;
+			background-size: cover;
+			animation: slide 20s linear infinite;
 		}
 
 		.slider-item:nth-child(1) {
-			transform: rotateY(0deg) translateZ(0);
-			z-index: 4;
+			background-image: url('https://via.placeholder.com/1200x800/ff0000/ffffff');
 			animation-delay: 0s;
 		}
 
 		.slider-item:nth-child(2) {
-			transform: rotateY(90deg) translateZ(-200px);
-			z-index: 3;
-			animation-delay: 2.5s;
-		}
-
-		.slider-item:nth-child(3) {
-			transform: rotateY(180deg) translateZ(-400px);
-			z-index: 2;
+			background-image: url('https://via.placeholder.com/1200x800/00ff00/ffffff');
 			animation-delay: 5s;
 		}
 
+		.slider-item:nth-child(3) {
+			background-image: url('https://via.placeholder.com/1200x800/0000ff/ffffff');
+			animation-delay: 10s;
+		}
+
 		.slider-item:nth-child(4) {
-			transform: rotateY(270deg) translateZ(-200px);
-			z-index: 1;
-			animation-delay: 7.5s;
+			background-image: url('https://via.placeholder.com/1200x800/ff00ff/ffffff');
+			animation-delay: 15s;
 		}
 
 		@keyframes slide {
 			0% {
-				transform: rotateY(0deg);
-			}
-			25% {
-				transform: rotateY(90deg);
-			}
-			50% {
-				transform: rotateY(180deg);
-			}
-			75% {
-				transform: rotateY(270deg);
+				transform: translateX(0%);
 			}
 			100% {
-				transform: rotateY(360deg);
+				transform: translateX(-25%);
 			}
 		}
 	</style>
 </head>
 <body>
 	<div class="slider">
-  		<div class="slider-container">
-    		<div class="slider-item">
-      			<img src="https://via.placeholder.com/400x300/ff0000/ffffff" alt="">
-    		</div>
-    		<div class="slider-item">
-      			<img src="https://via.placeholder.com/400x300/00ff00/ffffff" alt="">
-    		</div>
-    		<div class="slider-item">
-      			<img src="https://via.placeholder.com/400x300/0000ff/ffffff" alt="">
-    		</div>
-    		<div class="slider-item">
-      			<img src="https://via.placeholder.com/400x300/ff00ff/ffffff" alt="">
-    		</div>
-  		</div>
+  		<div class="slider-item"></div>
+  		<div class="slider-item"></div>
+  		<div class="slider-item"></div>
+  		<div class="slider-item"></div>
 	</div>
 </body>
 </html>
+Explicación:
+
+Este código HTML crea un slider con efecto de parallax utilizando la propiedad de CSS "background-image" y la propiedad de animación "animation".
+
+En la sección de encabezado, se incluyen las etiquetas "title", "meta" y "style". La etiqueta "title" establece el título de la página web. La etiqueta "meta" establece la codificación de caracteres y la escala de la página para dispositivos móviles.
+
+En la sección de cuerpo, se incluye un contenedor principal con la clase "slider". Dentro de este contenedor, se incluyen cuatro elementos con la clase "slider-item", cada uno con una imagen de fondo diferente. La propiedad "background-image" establece la imagen de fondo de cada elemento.
+
+El efecto de parallax se logra mediante la animación "slide", que utiliza la propiedad "transform" para desplazar el fondo de las imágenes hacia la izquierda. La propiedad "animation-delay" establece el retraso de la animación para cada elemento, de modo que se alternen las imágenes en un efecto de desplazamiento continuo.
+
+Con este código, se creará un slider con efecto de parallax utilizando HTML y CSS. Puedes personalizar el código para adaptarlo a tus necesidades.
+
+
+
+
+
