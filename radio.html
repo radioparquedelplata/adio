@@ -79,7 +79,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Slider con efecto de desvanecimiento</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -125,20 +124,21 @@
 			background-color: #333;
 		}
 	</style>
-
+</head>
+<body>
 	<div class="slider">
   		<div class="slider-container">
     		<div class="slider-item active">
       			<img src="https://via.placeholder.com/400x300/ff0000/ffffff" alt="">
     		</div>
     		<div class="slider-item">
-      			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4afj4Rklsw7ubPwN5tV7z9pwXrakD6IBGRg&usqp=CAU" alt="">
+      			<img src="https://via.placeholder.com/400x300/00ff00/ffffff" alt="">
     		</div>
     		<div class="slider-item">
-      			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4afj4Rklsw7ubPwN5tV7z9pwXrakD6IBGRg&usqp=CAU" alt="">
+      			<img src="https://via.placeholder.com/400x300/0000ff/ffffff" alt="">
     		</div>
     		<div class="slider-item">
-      			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4afj4Rklsw7ubPwN5tV7z9pwXrakD6IBGRg&usqp=CAU" alt="">
+      			<img src="https://via.placeholder.com/400x300/ff00ff/ffffff" alt="">
     		</div>
   		</div>
   		<div class="slider-controls">
@@ -193,3 +193,107 @@
 	</script>
 </body>
 </html
+
+
+
+Bachi Streaming
+OTRO SLAIDER
+Claro, aquí te muestro otro ejemplo de slider con efecto de transición 3D:
+
+HTML:
+
+php
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider con efecto de transición 3D</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.slider {
+			width: 100%;
+			position: relative;
+			perspective: 1000px;
+		}
+
+		.slider-container {
+			width: 100%;
+			height: 400px;
+			position: relative;
+			transform-style: preserve-3d;
+			animation: slide 10s infinite;
+		}
+
+		.slider-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+			transform-origin: center;
+		}
+
+		.slider-item:nth-child(1) {
+			transform: rotateY(0deg) translateZ(0);
+			z-index: 4;
+			animation-delay: 0s;
+		}
+
+		.slider-item:nth-child(2) {
+			transform: rotateY(90deg) translateZ(-200px);
+			z-index: 3;
+			animation-delay: 2.5s;
+		}
+
+		.slider-item:nth-child(3) {
+			transform: rotateY(180deg) translateZ(-400px);
+			z-index: 2;
+			animation-delay: 5s;
+		}
+
+		.slider-item:nth-child(4) {
+			transform: rotateY(270deg) translateZ(-200px);
+			z-index: 1;
+			animation-delay: 7.5s;
+		}
+
+		@keyframes slide {
+			0% {
+				transform: rotateY(0deg);
+			}
+			25% {
+				transform: rotateY(90deg);
+			}
+			50% {
+				transform: rotateY(180deg);
+			}
+			75% {
+				transform: rotateY(270deg);
+			}
+			100% {
+				transform: rotateY(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="slider">
+  		<div class="slider-container">
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/ff0000/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/00ff00/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/0000ff/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/ff00ff/ffffff" alt="">
+    		</div>
+  		</div>
+	</div>
+</body>
+</html>
