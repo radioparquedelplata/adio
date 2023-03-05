@@ -1,135 +1,126 @@
-<!doctype html>
-<html lang="es">
-<head>
+<html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="utf-8">
+<title>RADIO PARQUE DEL PLATA</title>
+<meta name="description" content="RADIO Y TV" />
 
-<meta charset="utf-8">
-<title>Bachi Streaming</title>
-<meta name="theme-color" content="#3811D4">
-</head>
-<body>
-<link href="css/redes.css" rel="stylesheet" type="text/css">
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
 
-<style type="text/css">
+<!-- Open Graph data -->
+<meta property="og:title" content="24 HORAS TU RADIO" />
+<meta property="og:type" content="B@chi" />
+<meta property="og:url" content="https://servicioselbachi.com" />
+<meta property="og:image" content="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATEhUQEhIWFRUVFRUVFxUVFhUVFxUWFRcYFxUWFRUYKCggGB0lGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABgQFAwcIAgH/xABKEAABAwICAwgPBgUEAQUAAAABAAIDBBEFIQYSMQcTQVFhcXOBFRciMjQ1U1SRkpOhssHRFCNCUnKxJDNDYoKis9Lw4SVEdKPC/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EADURAAIBAgQCCAQGAgMAAAAAAAABAgMRBBIhQTFREzJhcYGRoeEUItHwM0JSscHxFZIFI3L/2gAMAwEAAhEDEQA/AGbc+0HwubDaWaWjifI+FrnOc25cTwlMXa6wfzCD1Ubl/imi6BvzTSgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qO11g/mEHqppQgFbtdYP5hB6qi4nufYQ2GVzaGEERvIOrsIaSCnNQsZ8Hm6KT4SgOKUIQgOuty/xTRdA35ppStuX+KaLoG/NNKAEIQgBCEIAQhCAEIXwoD6hVdRjcDcg7WPE3P37FhGMOd3rQBy5qrPGUYOzl5akipTavYukKrjqnnafQpDHnjUX+Qhsn6B02iYhRi48ajy1DhsKf5CC4pnig2WKFSPxdzdrQea4WSHSCAmzjqH+7Z62xSQxtCWma3fodOjNK9i3QvDHgi4II4xmvatkQIQhACEIQAhCEAKFjPg83RSfCVNULGfB5uik+EoDilCEIDrrcv8U0XQN+aaUrbl/imi6BvzTSgBCEIAQhCAELHI8AEk2AFyTsAG0law0q0/dKTBRuLY8w6bYX8e98Tf7tp4ONR1asaauzunTc3ZDhjulsFOTG20so2sacm/rdwc21KFXjdRUHu3kN/I24b1jh60rUquKRYWKxM6mjenL74mjSoRh3lzRq9pFRM1Y2b7K9sUf55HBoPNwu6lU1u6XQxdzCyWocPxACKPqLu6PoVahRnN3S05kkry0irmxoFMjK0dV7rlcf5MMEQ5Q6Q+kkfsqqTdOxknKpDeRsMFve0rQjhHvIieCrPax0U5Q6hc/wAO6ri4JvUtdbaHQw/JoVxRbsFYP50EMn6daM26iV7LCP8AUcRwtTaz7mbRrFRVirKHdJw+fuZBJTuPC8B8dz/ezMc5FlaT2czfY3NkjOySNwc30jZ1rOr0Z038y+hYheOjVn2kCnxWeA3ieRxt2tPO3Z17U14HprDKRHNaKQ2AJPcOPI496eQ8e0pIqlUzhWMNiJ0+q9ORxVoxnx48zfSFqbRnTGWlIjm1pINnG+P9P5m8no4ltKkqmSMbJG4OY4Xa4ZghblGvGqrxM6pSdN2ZnQhCmIwQhCAFCxnwebopPhKmqFjPg83RSfCUBxShCEB11uX+KaLoG/NNKVty/wAU0XQN+aaUAIQhAC+Er6tW7rmlZY00EDrOcAZ3A5taRcRA8BdtPJzrmclFXZ3CDm7Ipd0DTf7W40tO7+GabOcLjf3A/wC2LZce3ZZLFKqqmV3hkGtckhrWjWe93esaNpP04VlV5uTuzTpwUVaJb4ZTvedVo4LkkgBoG1zicgFGxXTGGD7ujDZpNhne0mNp2HemHvj/AHOy4gl7HcfMw+zwXZTg58DpiPxSkbRxN2BVUUKjhh11p+RpYfBOprLgZK6pmnfvs0jpHn8TjfqHEOQKvnlNnb2O5b3z37AeIcZVq2NQo8KAyc4vAu4MOTbnPPjVuE47l6vhKqSjRVk+Lulbl721Ick7y1rWjuyATxAcqwtqHapJtt1W2yz6+pWLqEnXa0kuedoGdvyBXMOgtU8NfeKMAWbvssbLcua76SmtGZmIp1oO8pbc13ee77WlcURqgEEXDcyeNx4F7bLLcAgC+ZHCG8ZTLWaDVUTQ60cjRn91KyS5PDkqP7L3zXXu/a4ixHJZd9JB33K9KlVaWR+Wnh/C8WYW1es4NY24/wC5q6wuvnpn77TyOjdw6pycOJzdjhyFV9LS2td5dbZwD0DapoaoKk1wia+EwtScH0/FvhpZffeO+F6VQVNo6gNp5jkJGgiCTi1hmYjy97zLLXwuY7VeLH5HYQRkRyhIT4rq7wPSDUaKapu6HYyTa+Ani42XtdvoVKdFdaHl9CvicA6eseAy0sYeLKbgGPy4dL3QLqZ5vIyxJaT/AFIwOHZccPOqyB5ik1SQQbEOBu17Tsc08IKZq7DGzwF7cyBmFS+IlhqqlsZM0uDNmUtQyRjZI3BzHtDmuGYc0i4IWdaj3N9IXU0/Y+Y/dSO+6J/pyE95+l3By8624vpqNWNWCkjPqU3CVmCEIUpGChYz4PN0UnwlTVCxnwebopPhKA4pQhCA663L/FNF0DfmmlK25f4pougb800oAQhCAqtI8VbS08k5zLR3I/M85NHp911zrisznvfI86znuLnE8JO1bQ3UsRL5G04PcxjWdyvcMr8w+IrVdas6tUz1Lci/h4ZY35nmhjc5wY0XLjYL7juIhwFLEfu2Hu3D+rIMi79I4B1r4Z95hLhlJLdreRn43Div3vpVVC1RqOuZ+Br4OhfVmaJikMascazsXjPoqUUtD6vDiva+OOYXJOyU2kex4YwgOsMz+G+30K/p2YNDYVYmq5jtbGSSDwjJzR1XJVTXgGsfdrheXZzHJ3Mn7AaicU089BTM+0NeWkStIMoZtLbEaxtsF9q4cndf15s+TrVJWbb49tvXXRbchSq4MJmzoDLSyi/3chdfK+RBc6+zYHdSW5qOR5OtYyNaXG3Dq5nrstn6UPlEdPNWU7PtT+4cYmkiPWBOZNzsAvmc72WvMIDRU5Nd/Wtfgu19zzbV7GTbb5ePryI6U3ZNbeProUrFnasDVmYu5H01IyWWGZizBeXLlOxPUipKxZ6P4jcCkkOV7wvP4Hn8BP5He42Tjo5jbmExvy2tcD6CCtYztV/FXmSNs/422jk5SB3EnWMjytUWJw8a0b/dz5rHYdRdxk0kpWudrtyzvcbRxLaWguNmqpWuefvYzqScpGx3WLHnutO0uJa7dUpn3P8AEN5qgCe4lGo7ivtYee+X+RXn/HylRahLhwMivDNHuNvoQhb5ngoWM+DzdFJ8JU1QsZ8Hm6KT4SgOKUIQgOuty/xTRdA35ppStuX+KaLoG/NNKAF4lkDQXHYASepe1WaRy6tNIeMavrED5ripPJFy5HsVd2NQaRzF8j5Dtc5zvSch1bOpKM8Zc4NG0kD0pqxnaUtOfq75J+SNxH6ndy39/csak2a8Y3aRS4lUB8p1e9aAxv6W5D0m5614jCixKUxyuNW0N3DpIktWZqjB69iVQtGlCokXGA0jZZdV+YDXutx6oyCh1jA2QgZC6sdEH3nPRyfsqvFX2lPP81wr52ilUry+LSvpl4E+tIFa7unfzdtuM97zJz0drGgQj7dM2+IhlhG465P/ALY595n32zkFslitH8a/nv71tbQ+NuoMhtvsG3j5+VQzmllX3+x8/Vqpwf3/AAJGOVYc0WrZZP46Zo1mOF7a33Bz7wcB2cg4E7B33qW924337bfOzX5HkHyW3tN42gGwG0nYNp2nnzWraAfxLv0SfCUpyTctBTqWiilweJrpAHC4yyUnHKZsU8kbcmtIsOK7Q63vUbRx33o/xUvSx/8AFy87P9tqsSTz27DYw9Z/Eyu9LfQhBeXLEJF9Mi8ys13Vi0Y5Qs+DTWl3t3eyjUdznNh6nWWB7lGkOdxtGalirqxm4qzRdU7y11uEGx5xtTPhUpJBBseAjaDwEJcnN3iTgka1/W4C/vur3BuBV6qTR8+1Z2N9YbVb7EyT8zQeu2fvUtL+hkl6fV/K4jqNnfMpgWtRnnpqXNGVOOWTQKFjPg83RSfCVNULGfB5uik+EqU5OKUIQgOuty/xTRdA35ppStuX+KaLoG/NNKAFRaXO+5txuHuBV6l7TD+W3nP7KtjHahLuJKK/7EapxjhSti7rUz/75Y29QDnfJNOMcKU9IPBm9Of9tZlHiu816XWF5pWRr1HBXoFX7F+NSxID1631RtZGsvMpIq7Q06EPvUnopf2Vdjr7S9fzUjQeUCqAJ76OQDn1b/IqHpIPvCecdaiStV8CrOq+mzdgz1/hruf5ra+h/eBabpK4TTCYfiAJ5HcI9K3Lof3oWfWTUopmfUXyMi6cbCtVUPhDv0SfCVtXTjYVputrhC97+HUc1o4y7L536l7h03KSX3wPafURA0XP3o/xWfTB38bNzs/22KPoq074DxkAdS+6Xyg1sxBy1mjraxoPvBWha9V9xbpTaqXK8SL7rqOHL7rqTKi907MpevD3LxrLySiijiVS4x0xvDC7iD2eq64+JMWDcCW6DwePpJP/AMpkwbgVOvv4mdV6zNs6DO7l4/Sf3CakpaD/AI+Yfum1X8D+CvH9zLr/AIjBQsZ8Hm6KT4SpqhYz4PN0UnwlWyE4pQhCA663L/FNF0DfmmlK25f4pougb800oAVBpe37oHid+4Kv1U6Tx3pnn8tnegi/uJUGKV6Ml2ElJ2mjT+McKVMbF6Y/2ztJ5nMcP3ATVjG0pYqW60c0fGwPHPGb/tdZVHbvNen1hUuvN18K8krRSJnKx71l81l4uvmsurHDmS6SrdG9sjTm1wcOo7OvYr6YsncSO9eOsH6hK11Joa50TtYZjhB4VxOnfVcSOUr6lkYamjeJNW7PzWJYec/hP/c074HutsgaA6lLjySADquEaK6SUrrNMgY78snc36zkfSto4VhNHI0P+zwP1hfW3uN178N7ZqjKrFztWp6rchqytHmao0i3VmVA7ilLT/dICPcEmRUdRVO31wsz81rNtxN410PjWF0cTS/eII7fi3uNtuu2S1PpRpJSglrXiR3EzMdbti9hVSlalT1e/wB/UU3eIutmbTnWGxgyHGeD3pflmLnFzjcuJJ5zmisq3SO1ndQ4lgur0IW1fEli7GXWRrLFdF12dqZl1l6BWIFe2rlokUrjLQi0EI4zI73gD9kyYNwKge3V3uP8kbAf1EazveVf4NwLPq6p+JDUfzM2xoM3J55AE1pc0IitC53G/wBwA+ZKY1oYJWox8zKru9RgoWM+DzdFJ8JU1QsZ8Hm6KT4SrREcUoQhAddbl/imi6BvzTSlbcv8U0XQN+aaUALBVwh7HMP4mkekLOhGr6A0XjjCHOadoJB5xkUrGYMkDjsBz5jkfddbC3R6DeqguHeygvHPsf7yD/ktbVu1YsKbi3B7GrCV0pFDiNLvUjo+I5HjG1p9FlDITDi0G+QiYd9FZj+VhP3bvSdX0KgKvQldFp66mIr4vZXkhSETR5Qvtl9a0nIZniXpwfF07ubD/wBPpP8A48Xwhc5w4FVu72CQ8zV0hufQuZQ0rHtLXNgjDmnIghouCFRxkk4pJ7/wQVnoVu7B4tn5mfG1c3rpbdUpXy0E8cbS5xDbNGZNnNOS55nwWqZm6F4/xK6wbSi1fc9o9UgXXxerL4rhMCF8svQC8PUj6rLBKUSTNae9B1ncjWi5v6LdagNCZsNp96py49/Ps4xEDt/ycPQFHVlaJNHRXYb5rPc8/icT6dgTHg/AlmDanfQXD9/qI49o7936G2v7yB1qlUi5LKiu3a7ZuHAaXe6eNhGerc87sz+6skIWvGKiklsZTd3cFCxnwebopPhKmqFjPg83RSfCV0eHFKEIQHXW5f4pougb800pW3L/ABTRdA35ppQAhCEAt6dYN9ppXBovJHd7Bwkgd03rHvsuf67aupFpDdX0YNPN9qjb9zM7OwyjlO0HiDsyOW44QqlelrnRaw1S3ysTMMm1XXI1mkFrm8DmuyIVRj2FGCTI60bxrRv/ADN4j/cNhCsqdXFO2OSM0838t2bXWuYX+UbycY4QqnSZJX23NGEraMQCF8srTG8HlppN7kFwc2Pb3kjeBzDw/JVtlcUk1dHbR4srTR0Dfc9tsvmq2y9RuLTrAkEbCMkkrqxG0bm0e4FsrCtgXMlPpNWs72dw6mfMKwj3QcWbk2seP8Iv+KzVgZZr3RHVg5RsjofHO9K1hpBwpGl3QMWdk6sef8Iv+KrZ9Iqx/fTOPU0fsF78DLNmuhSg4xszDjoG+m3FnzquXtxJNzmV8stGKsrEmU+WX0BfbK3wDA5Kl5De5Y2xklcO5jby8ZPA3aUlJRV2dKJ70cwgTOL5LiGPOR3H+WNv9x/a6tMRnL3F5y4ABsaBkGjkAsFaVZjaxsEI1YmbAe+e7hkfxuPuGSpqhUs7qSzeRzOWyMUO1bx3LcFMVP8AaHiz5swDtEY73099zWWs9z3Rl1dU2cPuIiHSngPC2IHjdbPiF+MLoFjAAABYAWAGQAGwBW6FLXO/Ao4mp+UyIQhXCmChYz4PN0UnwlTVCxnwebopPhKA4pQhCA663L/FNF0DfmmlK25f4pougb800oAQhY53WaSuJyyxcuQRUY9jzKdtyRc3sMyTzAJAx/dAZLG+CSEPjeNVwc3bzEOyPKvGksxe5znHMk/+AkXEuFY9OvVm7uT7lwNKFKEVqkzxSvpBYHfv9CuqSSg4RP8A6PqlSLarOlSpC+7LGfsQ4B2GyxGnlZO9hzAdqXY787HA3afcVEj0OwU8FX60ah0i86U1skNG+WJ2q8FliLHa4A7eQqtCM1JQhNq75+xxJ2Tl+xcRaAYQ7zr1mKdFuYYO7hqfXZ9FqqHSnFY4mVX2hrmF5YGnUJu0XOs217cq2tT6VXwk4iQGu3lxA4N8DjGLX4NcZK044qja8k7u3j5FfpVJPV8+JIZuS4SfxVHrt+iyjcewo/iqPaN+i1jo5un4kKmDf5rwukaHjUaAWk2dmBwXT1u2aUVtF9k+yzGPfBPr2DTram9avfA7NZ3pVpuvGai3HXsIHWdtGy07TmFfmqPaN+ixv3IsJH4qj12/RIEmnOkVCIaipIfFO0PjEgjcyRuR2xm7TYjIkHkTJuk6d1DKWiq6KTe21LXucCGu2BuRuOA3C9fT5kk4672CrS5ssZtzDB28NT67PooMugGDjzr1mKHpRpzNTUFG4WfU1MDHl7hk0arS55AtmS7IbMjzFHl0kxiJrKqRzt7kPcl7W6juECwzGQKrKGKq/MpJctrk3TRjo22PMmh2Cjgq/WjU6eXDmxtgjZOyNmxrQwAnhc4k3c48ZVZhGLNqoGzgapNw5u2zhtF+Lh61gqlSaqZstST0LUWmk07n2qfQcU//ANf1VRUyUfFN/o+q+VKrZlZp0+1+Z7mtsh+0W06bSxNp4oQGg3J1bue47XOOtmStj6O6UMqcsta17Zg+g7VoGh2p40deQ4OBsQbgrqpWqwV4yfp9CGdOEk9F9+JukFfVGoJdZjXcYB9ykrWpTzwUuZmtWdgULGfB5uik+EqaoWM+DzdFJ8JUh4cUoQhAddbl/imi6BvzTSlbcv8AFNF0DfmmlACwVfeO5j+yzrBUjuSOQqHEfhS7merialx3hSRiXCnfHuHrSPiW0rFw5rMrY9qs6VVke1WVMrEwXNIo+mzSaGQAXN48hme/alnA8cmLu6l17RzOc3VaNTUHcG4HCVNpseq20dQ90v3rN4cx2qzJsjmgi1rHaeBFhZwmpaaNfv3EEq8ZRa7GLUuBS/ZY6prXG8j43t1T3JFi024jn1gcacdLMbE2E0tPBG5hLgJIgCSwQggAjbZziHA8i90+ktYKaciUm08EUcro2NeBJffAWWFiLCxI4VZ0+lFa1rI9+uW4pHSueWR6z4XAktdlYHlFirMpyclnS+WWmr5f+dr/ANFeyto+K5CPjGB17aKkfJCBF95vZYCXu3w653wDMbMky7p9XJVUGES6rnP3mZsncm+uwQNcSOC5aT1q1GmVeKeJ5q3s1sRnp3SNhikcIWMZqhrNQ3IuTsubpx03xaqhiw1kFS5pqaiCGSYxRFz2yNaC8xvaWtcSdawAtsXTqSzRckuL58n2EVlsakxrGa/E4aSgio32p2hrQxr3ue4NDNZxsA0WHML7VebqWAyU1BhtLYvfE2QP1ASNY6pds4Lkq3Omtf8AZqNzqoxF9VVQTSxU8T3PZFqlrt6DSL527kBN2B4vUSYjW08kpfFDHTujaWsFi9vdG4AOe2xJtdeVJSp2lZWV3a/Hbl2iKT0NcaZaNTz4dh9TExzzDSxskYAS7VLGkOA2mxvccyVMS0graqnjonRE6hbm1jtd+qCGgjr4OJPWKaV1jcUlpxUdw2rgiZBvcZ1opL76da2t3ORvfhUV2O1P2Con17zCodEx2qwEDXa1otax2naFFGUoKKlFPW614ZvAmSTvZtc+2xm0Zwp1NStjfk8kvcOIutlfkAC9VSpK/FKsUJn3877FK+N51I7PIk1RkRlYHgUPG66pjdG0S3AY18hLWXcHPA4ssuJQfDznNttXbfPYsKtGMVZO1kWNSqyZWdSVWzLqmTGah2p2wHaEk0O1OuA7Qoa/AG4MI/lM/SFNUPC2kRtB/KP2Uxa2E/Bj3GVPrMFCxnwebopPhKmqFjPg83RSfCVYOTilCEIDrrcv8U0XQN+aaUrbl/imi6BvzTSgBeXC69IXjV1ZgR9LtHC+8kZsTclp2E8YI2LWOK4FUAnuPeF0KV81BxD0LPjgMr+WWnd7otQxOVWav4+xzVBgFSTlH7wrek0Yqz/THrN+q37qDiHoX3VHEF1LBzf5vR/Uk+Lj+n19jQmHbn9a2mfTi136/dXblrW4Lr23coq97ljDgBKyJpu7WsY3NcTm7YbHLgW+bIsiw1dXtUWrv1ffsIJVYvb1NLncwqHCou8AzOge0i3cOgDgL590DrcmxZsO3Nqt1PaVzY6kVbazXDmyRmRtwBqANIba2V73W4rIsu4Yea6078Hwtw/o4c77GrYNzKdkMDWVIbNFVSVZkMYc0yPAFmsvk0ao2kq90n0RqKyOjBqGsmpZI5jJvYLZJWNHdal+5BcL26k62X1SfDxve79N/A5zGs4tzOaOKmbDVhstPPNUb46IODnzWGTL2AAHvVjR6H1UddJWioaWzNY2aPe2gv3uMtBa+/cd2dbIcie0LqVBS4t+n0PFKxr7DtDpoKqsqg4O+1OY7VyGpqBwsTfO+t7kpTbmFcY3U+/AxunE9g1oINySNa9+EehbtshVng5KWaM7cNk+HAk6XSzX77mjJdzGr+zzUzSLSy76CXAluYNiSe6PcjNQMb3N6yV7nnK8bWABwy1bZmxz5l0FZfNUcSLD1079Iv8AX75I96WO8TQM2jFYAAWA2AHfN+qqqjR+qH9P3hdJag4gjexxD0JHCTX5vT3J/i4/p9fY5yoMDqL957wtkaH6NOuHy8GeqNn+R4uRbF1BxD0L1ZeTwLlxnp3e5zLFJqyjbx9jzG2wXtCFejFRSS4IqAoWM+DzdFJ8JU1QsZ8Hm6KT4SugcUoQhAddbl/imi6BvzTSkvc0xGBuFUbXTRgiBtwXtBG3aCUz9lqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATUKF2WpvLxe0Z9Udlqby8XtGfVATVCxnwebopPhKOy1N5eL2jPqoeMYpTmCYCeL+VJ/UZ+U8qA41QhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEIAQhCAEIQgBCEID0hCEB//9k=" />
+<meta property="og:description" content="BACHI STREAMING TU RADIO Y TV 24 HS" />
+    </head>
+    <body>
+	
+        
+	    <link rel="shortcut icon" href="https://github.com/serviciosinformaticoselbachi/REPROTRUEQ/blob/master/IMAGES/RED%20DE%20RADIOS.jpg?raw=true">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link 
+    
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="estilos.css">
+          <link rel="stylesheet" href="whatsapp.css">   
+    </head>
+    <body>
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=59893422446&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20radio.." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+      
+      
+        <header>
+            <nav class="navbar">
+                <div class="contenedor">
+                    <a href="https://servicioselbachi.com/">Inicio</a>
+  
+                  
+                    <a href="https://canalmasuruguay.com/">Canal+</a>
+                    <a href="https://api.whatsapp.com/send/?phone=59893422446&text=CONTACTO%20DESDE%20SERVICIOS%20INFORMATICOS">Soporte</a>
+     </i>
+    </a>
+            </nav >
+	    
+<iframe frameborder="0" height="100%" width="100%" scrolling="no" src="https://radioparquedelplata.com/"></iframe>
+  
 
-    
-    
-  <!DOCTYPE html>
-<html>
-  <head>
-    <title>Video de fondo de página responsive</title>
-    <style>
-    
-    
-     
-    
-    
-    
-.fs-vid-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0 0;
-    z-index: 250;
-}
-.fs-vid-background video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-video {
-    max-width: 100%;
-}
-#capa1{ 
 
- background-color:transparent;
- position: relative;
- display: flex;
- height: 16vh;
- align-items: center;
- justify-content: center;
- margin: -1px auto;
- left: -2px;	
- z-index: 300;
-}	
-    
-    
-      .video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-      }
 
-      #myVideo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        transform: translate(-50%, -50%);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="video-background">
-      <video autoplay muted loop id="myVideo">
-        <source src="https://pkdo.eskuchame.com/video/home.mp4" type="video/mp4">
-        <source src="video.webm" type="video/webm">
-      </video>
+	<tr>                 
+   </div>
+   <br/>
 
     
+                <hr><border-radius: 3px;
+            </div>
+  <div align="center">
+<p><a href="https://play.google.com/store/apps/details?id=radioparque">
+<img src="https://github.com/serviciosinformaticoselbachi/REPROTRUEQ/blob/master/IMAGES/logoGOOGLEPLAY.png?raw=true" alt="GOOGLEPLAY" width="220px" height="auto"margin="1%"></p>
+        </header>
+        <main id="blog">
+            <div class="contenedor">
+                <aside>
+                    <h3 class="titulo">QUIERES TENER TU RADIO ONLINE DESDE TU CASA¿?</h3>
+                   
+                    <nav class="indice">
+                        
+                        <a span style="text-decoration: none;">✅ 24hs. de transmisión </span></a>
+                        <a span style="text-decoration: none;">✅ Oyentes Ilimitados</span></a>
+                        <a span style="text-decoration: none;">✅ Hasta 320 kbps</span></a>
+                        <a span style="text-decoration: none;">✅ 5 GB espacio para AutoDj</span></a>
+                        <a span style="text-decoration: none;">✅ LINK SSL - HTTPS Gratis</span></a>
+                        <a span style="text-decoration: none;">✅ Transferencia Ilimitada</span></a>
+                        <a span style="text-decoration: none;">✅ ShoutCast/IceCast</span></a>
+                        <a span style="text-decoration: none;">✅ Player HTML5</span></a>
+                        <a span style="text-decoration: none;">✅ Soporte para Moviles</span></a>
+                        <a span style="text-decoration: none;">✅ Pagina web con Subdominio Gratis</span></a>
+                        <a span style="text-decoration: none;">✅ En minutos su Radio al Aire</span></a>
+                        <a span style="text-decoration: none;">✅ WhatsApp: +59893422446</span><a>
+                        
+                    <br>
+                        
+                        <h3 class="titulo"span style="text-decoration: none;">¿Qué necesito para crear una radio web?</h3>
+                        <a span style="text-decoration: none;">Crear una radio web es muy simple y no requiere gran inversión. Sólo tienes que un ordenador conectado a Internet y un micrófono si quieres realizar transmisiones en vivo. (Tamien puedes desde un Celular)</span</a>
+                        <br>
+                            
+                        </p>
+                    
+                            
+                            <h3 class="titulo"span style="text-decoration: none;"> ¿Puedo probar el servicio sin compromiso?</span></h3>
+                            <p>
+                                <aspan style="text-decoration: none;">Sí. Usted podrá probar nuestros servicios por 24hs gratis sin ningún compromiso. Después de ese período, para continuar utilizando usted deberá optar por uno de nuestros planes.</a>
+                            </p>
+                            
+                            <br>
+                            <h3 class="titulo">¿Para quién se recomienda una radio web?</h3>
+                                <p>
+                                    <a span style="text-decoration: none;">Además de las radios AM y FM, tener una radio en Internet puede ser muy interesante para Asociaciones de residentes, Clubes, ONG’s, Iglesias, DJ’s, Bandas, Locutores y Radialistas. La radio web también puede ser utilizada como canal de comunicación interno en empresas, tiendas y supermercados. Y por supuesto, si usted es un entusiasta de la radio, seguramente construirá su propia emisora de radio en la web.</a>
+                            
+                                    
+                    </div>		
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+            <br/>
+        
+            
+            </div>
+            <nav class="navbar">
+                    <div class="contenedor">
+                    <a href="https://servicioselbachi.com/">Inicio</a>
+                    <a href="https://www.facebook.com/elbachionline">Facebook</a>
+                   
+                    <a href="https://api.whatsapp.com/send/?phone=59893422446&text=CONTACTO%20DESDE%20SERVICIOS%20INFORMATICOS">Soporte</a>
+                </div>
+            </nav>
+        </footer>
+    </body>
+    </html>
     
-    
-    
-   
-</style>
-<div class="fs-vid-background">
-  <video autoplay="true" muted="true" loop="true">
-    <source src="" type="video/mp4">
-  </video>
-</div>	
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/lunaradio-sincors.js"></script>
-
-<div id="lunaradio" style="width:100%; height: 100%; position: absolute; left:0; top:0; z-index: 300; ">
-</div>			
-
-<script>
-$("#lunaradio").lunaradio({
-userinterface: "big", 
-backgroundcolor: "",
-fontcolor: "#6FD929",
-hightlightcolor: "#610094", 
-fontname: "Unica One", 
-googlefont: "Unica+One&display=swap", 
-fontratio: "0.4", 
-radioname: "Bachi Streaming", 
-scroll: "true", 
-coverimage: "js/logo.jpg",
-onlycoverimage: "false",
-coverstyle: "animated",
-usevisualizer: "real", 
-visualizertype: "4", 
-metadatatechnic: "",
-ownmetadataurl: "", 
-streamurl: "https://radios.servicioselbachi.com/8008/stream", 
-streamtype: "shoutcast2", 
-icecastmountpoint: "",
-shoutcastpath: "/stream",
-shoutcastid: "1", 
-streamsuffix: "", 
-radionomyid: "", 
-radionomyapikey: "",
-radiojarid: "",  
-radiocoid: "",
-itunestoken: "1000lIPN", 
-metadatainterval: "5000", 
-volume: "100",
-debug: "false",
-autoplay: "true"
-});
-</script>
