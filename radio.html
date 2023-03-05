@@ -62,104 +62,78 @@
 <p><a href="https://play.google.com/store/apps/details?id=radio.delplata">
 <img src="https://github.com/serviciosinformaticoselbachi/REPROTRUEQ/blob/master/IMAGES/logoGOOGLEPLAY.png?raw=true" alt="GOOGLEPLAY" width="220px" height="auto"margin="1%"></p>
     <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		* {
-			box-sizing: border-box;
-			font-family: Arial, sans-serif;
-		}
-
-		.carousel {
-			width: 100%;
-			display: flex;
-			overflow-x: scroll;
-			scroll-snap-type: x mandatory;
-			scroll-behavior: smooth;
-			-webkit-overflow-scrolling: touch;
-			padding: 10px 0;
-		}
-
-		.carousel > * {
-			flex: 0 0 auto;
-			margin-right: 10px;
-			scroll-snap-align: start;
-		}
-
-		.carousel img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		.carousel::-webkit-scrollbar {
-			height: 5px;
-		}
-
-		.carousel::-webkit-scrollbar-thumb {
-			background-color: #aaa;
-			border-radius: 5px;
-		}
-
-		.carousel::-webkit-scrollbar-track {
-			background-color: #ddd;
-			border-radius: 5px;
-		}
-
-		.footer {
-			background-color: #222;
-			padding: 20px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #fff;
-			font-size: 1.2em;
-		}
-
-		.footer a {
-			color: #fff;
-			text-decoration: none;
-			margin: 0 10px;
-			font-size: 1.5em;
-		}
-		
-		.footer a:hover {
-			color: #aaa;
-		}
-
-		@media (max-width: 768px) {
-			.carousel {
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				overflow-x: auto;
-			}
-
-			.carousel > * {
-				margin-right: 0;
-				margin-bottom: 10px;
-				flex: 0 0 90%;
-			}
-		}
-	</style>
+  <meta charset="UTF-8">
+  <title>Carrusel con iconos de redes sociales</title>
+  <!-- Incluimos los estilos de Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <style>
+    /* Estilos del carrusel */
+    .carousel-item {
+      height: 500px;
+    }
+    
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+    }
+    
+    /* Estilos del pie de página */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    footer a {
+      color: white;
+    }
+  </style>
 </head>
 <body>
-
-	<div class="carousel">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpX5jFfOCtdeMx8seIC3h2YLixTrgDY4UQyQ&usqp=CAU" alt="Image 1">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpX5jFfOCtdeMx8seIC3h2YLixTrgDY4UQyQ&usqp=CAU" alt="Image 2">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpX5jFfOCtdeMx8seIC3h2YLixTrgDY4UQyQ&usqp=CAU" alt="Image 3">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpX5jFfOCtdeMx8seIC3h2YLixTrgDY4UQyQ&usqp=CAU" alt="Image 4">
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpX5jFfOCtdeMx8seIC3h2YLixTrgDY4UQyQ&usqp=CAU" alt="Image 5">
-	</div>
-
-	<div class="footer">
-		<a href="#"><i class="fab fa-facebook"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
-		<a href="#"><i class="fab fa-instagram"></i></a>
-		<a href="#"><i class="fab fa-linkedin"></i></a>
-		<a href="#"><i class="fab fa-youtube"></i></a>
-	</div>
-
-	<!-- Font Awesome CDN -->
-	<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
-</body>
-</html>
+  <!-- Carrusel -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicadores del carrusel -->
+    <ul class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
+    
+    <!-- Imágenes del carrusel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/1500x500" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1500x500" alt="Imagen 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1500x500" alt="Imagen 3">
+      </div>
+    </div>
+    
+    <!-- Controles del carrusel -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+  
+  <!-- Pie de página -->
+  <footer>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </footer>
+  
+  <!-- Incluimos los scripts de Bootstrap y Font Awesome -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  <
