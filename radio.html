@@ -76,61 +76,120 @@
    </div>
    <br/>
  <div align="center">
-<h3>NUESTROS AUSPICIANTES</h3>
-	 <tr>                 
-   </div>
-   <br/>
-
-    
-                <hr><border-radius: 3px;
-            </div>
-
-	<tr>                 
-   </div>
-   <br/>
-	 
-	<title>Slider Infinito</title>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider con efecto de desvanecimiento</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		.slider {
 			width: 100%;
-			overflow: hidden;
 			position: relative;
 		}
 
 		.slider-container {
 			display: flex;
-			width: 100%;
-			animation: slide 10s infinite;
+			overflow: hidden;
 		}
 
-		.slider-container img {
-			width: 50%;
-			object-fit: cover;
+		.slider-item {
+			flex: 1 0 100%;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
 		}
 
-		@keyframes slide {
-			0% {
-				transform: translateX(0%);
-			}
-			30% {
-				transform: translateX(-50%);
-			}
-			50% {
-				transform: translateX(0%);
-			}
+		.slider-item.active {
+			opacity: 1;
+		}
+
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.slider-control {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: #ddd;
+			margin: 0 5px;
+			cursor: pointer;
+		}
+
+		.slider-control.active {
+			background-color: #333;
 		}
 	</style>
-</head>
-<body>
+
 	<div class="slider">
   		<div class="slider-container">
-    		<img src="https://via.placeholder.com/200x200/ff0000/ffffff" alt="">
-    		<img src="https://via.placeholder.com/200x200/00ff00/ffffff" alt="">
-    		<img src="https://via.placeholder.com/200x200/0000ff/ffffff" alt="">
-    		<img src="https://via.placeholder.com/200x200/ff00ff/ffffff" alt="">
+    		<div class="slider-item active">
+      			<img src="https://via.placeholder.com/400x300/ff0000/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/00ff00/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/0000ff/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/ff00ff/ffffff" alt="">
+    		</div>
+  		</div>
+  		<div class="slider-controls">
+    		<div class="slider-control active"></div>
+    		<div class="slider-control"></div>
+    		<div class="slider-control"></div>
+    		<div class="slider-control"></div>
   		</div>
 	</div>
+	<script>
+		const sliderItems = document.querySelectorAll('.slider-item');
+		const sliderControls = document.querySelectorAll('.slider-control');
+		let index = 0;
+
+		function showSlide() {
+  			sliderItems.forEach(item => {
+    			item.classList.remove('active');
+  			});
+  			sliderControls.forEach(control => {
+    			control.classList.remove('active');
+  			});
+  			sliderItems[index].classList.add('active');
+  			sliderControls[index].classList.add('active');
+		}
+
+		function nextSlide() {
+  			index++;
+  			if (index >= sliderItems.length) {
+    			index = 0;
+  			}
+  			showSlide();
+		}
+
+		function prevSlide() {
+  			index--;
+  			if (index < 0) {
+    			index = sliderItems.length - 1;
+  			}
+  			showSlide();
+		}
+
+		sliderControls.forEach((control, i) => {
+  			control.addEventListener('click', () => {
+    			index = i;
+    			showSlide();
+  			});
+		});
+
+		setInterval(() => {
+  			nextSlide();
+		}, 5000);
+	</script>
 </body>
-</html>
+</html
