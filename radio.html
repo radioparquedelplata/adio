@@ -76,30 +76,61 @@
    </div>
    <br/>
  <div align="center">
-<!DOCTYPE html>
-<html>
-<head>
+<title>Slider con efecto de carrusel</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		.slider {
 			width: 100%;
+			overflow: hidden;
 			position: relative;
 		}
 
 		.slider-container {
 			display: flex;
-			overflow: hidden;
+			width: 400%;
+			animation: slide 20s linear infinite;
 		}
 
 		.slider-item {
-			flex: 1 0 100%;
-			opacity: 0;
-			transition: opacity 0.5s ease-in-out;
+			flex: 1 0 25%;
+			padding: 10px;
+			box-sizing: border-box;
 		}
 
-		.slider-item.active {
-			opacity: 1;
+		.slider-item img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+		@keyframes slide {
+			0% {
+				transform: translateX(0%);
+			}
+			20% {
+				transform: translateX(0%);
+			}
+			25% {
+				transform: translateX(-100%);
+			}
+			45% {
+				transform: translateX(-100%);
+			}
+			50% {
+				transform: translateX(-200%);
+			}
+			70% {
+				transform: translateX(-200%);
+			}
+			75% {
+				transform: translateX(-300%);
+			}
+			95% {
+				transform: translateX(-300%);
+			}
+			100% {
+				transform: translateX(-400%);
+			}
 		}
 
 		.slider-controls {
@@ -128,7 +159,7 @@
 <body>
 	<div class="slider">
   		<div class="slider-container">
-    		<div class="slider-item active">
+    		<div class="slider-item">
       			<img src="https://via.placeholder.com/400x300/ff0000/ffffff" alt="">
     		</div>
     		<div class="slider-item">
@@ -140,6 +171,12 @@
     		<div class="slider-item">
       			<img src="https://via.placeholder.com/400x300/ff00ff/ffffff" alt="">
     		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/ffff00/ffffff" alt="">
+    		</div>
+    		<div class="slider-item">
+      			<img src="https://via.placeholder.com/400x300/00ffff/ffffff" alt="">
+    		</div>
   		</div>
   		<div class="slider-controls">
     		<div class="slider-control active"></div>
@@ -150,124 +187,4 @@
 	</div>
 	<script>
 		const sliderItems = document.querySelectorAll('.slider-item');
-		const sliderControls = document.querySelectorAll('.slider-control');
-		let index = 0;
-
-		function showSlide() {
-  			sliderItems.forEach(item => {
-    			item.classList.remove('active');
-  			});
-  			sliderControls.forEach(control => {
-    			control.classList.remove('active');
-  			});
-  			sliderItems[index].classList.add('active');
-  			sliderControls[index].classList.add('active');
-		}
-
-		function nextSlide() {
-  			index++;
-  			if (index >= sliderItems.length) {
-    			index = 0;
-  			}
-  			showSlide();
-		}
-
-		function prevSlide() {
-  			index--;
-  			if (index < 0) {
-    			index = sliderItems.length - 1;
-  			}
-  			showSlide();
-		}
-
-		sliderControls.forEach((control, i) => {
-  			control.addEventListener('click', () => {
-    			index = i;
-    			showSlide();
-  			});
-		});
-
-		setInterval(() => {
-  			nextSlide();
-		}, 5000);
-	</script>
-</body>
-</html
-
-
-<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		.slider {
-			width: 100%;
-			height: 400px;
-			position: relative;
-			overflow: hidden;
-		}
-
-		.slider-item {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-position: center center;
-			background-size: cover;
-			animation: slide 20s linear infinite;
-		}
-
-		.slider-item:nth-child(1) {
-			background-image: url('https://via.placeholder.com/1200x800/ff0000/ffffff');
-			animation-delay: 0s;
-		}
-
-		.slider-item:nth-child(2) {
-			background-image: url('https://via.placeholder.com/1200x800/00ff00/ffffff');
-			animation-delay: 5s;
-		}
-
-		.slider-item:nth-child(3) {
-			background-image: url('https://via.placeholder.com/1200x800/0000ff/ffffff');
-			animation-delay: 10s;
-		}
-
-		.slider-item:nth-child(4) {
-			background-image: url('https://via.placeholder.com/1200x800/ff00ff/ffffff');
-			animation-delay: 15s;
-		}
-
-		@keyframes slide {
-			0% {
-				transform: translateX(0%);
-			}
-			100% {
-				transform: translateX(-25%);
-			}
-		}
-	</style>
-</head>
-<body>
-	<div class="slider">
-  		<div class="slider-item"></div>
-  		<div class="slider-item"></div>
-  		<div class="slider-item"></div>
-  		<div class="slider-item"></div>
-	</div>
-</body>
-</html>
-Explicación:
-
-Este código HTML crea un slider con efecto de parallax utilizando la propiedad de CSS "background-image" y la propiedad de animación "animation".
-
-En la sección de encabezado, se incluyen las etiquetas "title", "meta" y "style". La etiqueta "title" establece el título de la página web. La etiqueta "meta" establece la codificación de caracteres y la escala de la página para dispositivos móviles.
-
-En la sección de cuerpo, se incluye un contenedor principal con la clase "slider". Dentro de este contenedor, se incluyen cuatro elementos con la clase "slider-item", cada uno con una imagen de fondo diferente. La propiedad "background-image" establece la imagen de fondo de cada elemento.
-
-El efecto de parallax se logra mediante la animación "slide", que utiliza la propiedad "transform" para desplazar el fondo de las imágenes hacia la izquierda. La propiedad "animation-delay" establece el retraso de la animación para cada elemento, de modo que se alternen las imágenes en un efecto de desplazamiento continuo.
-
-Con este código, se creará un slider con efecto de parallax utilizando HTML y CSS. Puedes personalizar el código para adaptarlo a tus necesidades.
-
-
-
-
-
+		const sliderControls =
